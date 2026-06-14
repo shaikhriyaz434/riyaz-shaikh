@@ -355,7 +355,7 @@
         .terminal {
             font-family: var(--font-code);
             font-size: 0.82rem;
-            height: 380px;
+            height: 480px;
             display: flex;
             flex-direction: column;
             width: 100%;
@@ -1017,6 +1017,26 @@
                             <span class="date">Oct 2019 – Apr 2020</span>
                         </div>
                     </div>
+
+                    <!-- SD Global -->
+                    <div class="timeline-card-wrapper" onclick="loadJob(4, this)">
+                        <div class="timeline-dot-indicator"></div>
+                        <div class="timeline-mini-card">
+                            <h4>Software Developer</h4>
+                            <div class="company">SD Global Technologies, KL</div>
+                            <span class="date">Apr 2017 – Oct 2019</span>
+                        </div>
+                    </div>
+
+                    <!-- SOFOMO -->
+                    <div class="timeline-card-wrapper" onclick="loadJob(5, this)">
+                        <div class="timeline-dot-indicator"></div>
+                        <div class="timeline-mini-card">
+                            <h4>Software Developer</h4>
+                            <div class="company">SOFOMO Embedded Solutions, Pune</div>
+                            <span class="date">Jun 2015 – Apr 2017</span>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Timeline display detail panel (Right side) -->
@@ -1221,6 +1241,23 @@
                     "<strong>Backend & Mobile:</strong> Formulated Express.js & PostgreSQL APIs for smart parking app.",
                     "<strong>App Development:</strong> Spearheaded mobile deployment using Flutter."
                 ]
+            },
+            {
+                role: "Software Developer",
+                company: "SD Global Technologies, Kuala Lumpur, Malaysia",
+                date: "Apr 2017 – Oct 2019",
+                bullets: [
+                    "<strong>System Architecture:</strong> Designed and implemented core modules for the Clinicare EMR system (Express.js, RabbitMQ, Angular).",
+                    "<strong>Scrum & Delivery:</strong> Managed API design and delivery in a Scrum environment, coordinating cross-team integrations."
+                ]
+            },
+            {
+                role: "Software Developer",
+                company: "SOFOMO Embedded Solutions, Pune, India",
+                date: "Jun 2015 – Apr 2017",
+                bullets: [
+                    "Developed full-stack web platforms and Android apps, successfully transitioning from Android to backend Node.js development."
+                ]
             }
         ];
 
@@ -1258,10 +1295,13 @@
         const termInput = document.getElementById('term-input');
 
         const cliCommands = {
-            help: 'Available commands:\n- about: Professional background info\n- agentic: Detail of AI agents research\n- metrics: Career statistics\n- clear: Clear the terminal logs',
+            help: 'Available commands:\n- about: Professional background info\n- skills: Core technical competencies\n- experience: Summary of career timeline\n- contact: Contact details & social profiles\n- agentic: Detail of AI agents research\n- metrics: Key career achievements\n- theme [aurora|solar]: Toggle visual themes\n- clear: Clear the terminal logs',
             about: 'Shaikh Riyaz Rajjak: Senior API & Integration Architect based in Singapore. Specializing in developer automation pipelines, gateway configurations, and agent frameworks.',
             agentic: 'Agentic Workflows:\nActive developer of agent plugin environments. Working with LangGraph to script autonomous pipelines executing system verification tasks (linting, contract validation).',
-            metrics: 'Key Metrics:\n- 10+ Years Professional Experience\n- 200+ Enterprise Gateways Migrated\n- 1 Internal Agentic Plugin Marketplace Scaled'
+            metrics: 'Key Metrics:\n- 10+ Years Professional Experience\n- 200+ Enterprise Gateways Migrated\n- 1 Internal Agentic Plugin Marketplace Scaled',
+            skills: 'Technical Skills:\n- AI & Agents: LangGraph, Agent plugin design\n- Gateways: Kong, Apigee, MuleSoft\n- Languages/Frameworks: Node.js, Express, NestJS, React, Next.js, Java, Spring Boot\n- DevOps/IaC: Terraform, AWS, Docker, Kubernetes, CI/CD\n- Databases: PostgreSQL, MongoDB, Redis, RabbitMQ',
+            experience: 'Career Timeline Summary:\n1. Principal API Developer @ MSD Singapore (2022-Pres)\n2. Full-Stack Developer @ Credit Agricole CIB (2022)\n3. Software Developer @ Manulife Malaysia (2020-2022)\n4. Software Developer @ Nbytes Mumbai (2019-2020)\n5. Software Developer @ SD Global KL (2017-2019)\n6. Software Developer @ SOFOMO Pune (2015-2017)',
+            contact: 'Contact Information:\n- Location: Singapore\n- Email: shaikhriyaz434@gmail.com\n- Phone: +65 85874804\n- Github: github.com/shaikhriyaz434\n- LinkedIn: linkedin.com/in/riyaz-shaikh-0548a899'
         };
 
         function writeTerm(text) {
@@ -1278,6 +1318,14 @@
             
             if (clean === 'clear') {
                 termScreen.innerHTML = '';
+            } else if (clean === 'theme aurora') {
+                const btn = document.querySelector('.theme-option[onclick*="aurora"]');
+                setTheme('aurora', btn);
+                writeTerm('Theme toggled to "Aurora" (Light Glassmorphism).');
+            } else if (clean === 'theme solar') {
+                const btn = document.querySelector('.theme-option[onclick*="solar-orange"]');
+                setTheme('solar-orange', btn);
+                writeTerm('Theme toggled to "Solar Orange" (High-contrast Dark).');
             } else if (cliCommands[clean]) {
                 writeTerm(cliCommands[clean]);
             } else if (clean === '') {
