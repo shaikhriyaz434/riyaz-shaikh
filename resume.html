@@ -182,47 +182,48 @@
         .job-header {
             display: flex;
             justify-content: space-between;
-            align-items: baseline;
+            align-items: flex-start;
             margin-bottom: 6px;
         }
 
         .job-title {
-            font-size: 14.5px;
+            font-size: 15px;
             font-weight: 700;
             color: var(--primary);
         }
 
         .job-company {
+            display: block;
+            font-size: 13px;
             font-style: italic;
-            color: var(--primary-light);
-            font-weight: 500;
+            color: var(--accent);
+            font-weight: 600;
+            margin-top: 2px;
         }
 
         .job-date {
             font-size: 13px;
             color: var(--text-muted);
-            font-weight: 500;
+            font-weight: 600;
+            white-space: nowrap;
         }
 
         .job-bullets {
-            list-style-type: none;
-            padding-left: 0;
+            list-style-type: square;
+            padding-left: 18px;
+            margin-top: 6px;
         }
 
         .job-bullets li {
             font-size: 13.5px;
-            position: relative;
-            padding-left: 15px;
-            margin-bottom: 4px;
+            margin-bottom: 5px;
             text-align: justify;
+            color: var(--text-main);
+            line-height: 1.45;
         }
 
-        .job-bullets li::before {
-            content: "•";
+        .job-bullets li::marker {
             color: var(--accent);
-            position: absolute;
-            left: 0;
-            font-weight: bold;
         }
 
         /* Education */
@@ -372,6 +373,11 @@
                 font-size: 13.5px;
             }
 
+            .job-company {
+                font-size: 12px;
+                margin-top: 1px;
+            }
+
             .job-bullets li {
                 font-size: 12.5px;
                 margin-bottom: 2px;
@@ -462,7 +468,7 @@
             <div class="job-header">
                 <div>
                     <span class="job-title">Principal Web API Developer (Engineering Efficiency)</span>
-                    <span class="job-company">| MSD International GMBH, Singapore</span>
+                    <span class="job-company">MSD International GMBH, Singapore</span>
                 </div>
                 <span class="job-date">Oct 2022 – Present</span>
             </div>
@@ -481,7 +487,7 @@
             <div class="job-header">
                 <div>
                     <span class="job-title">Full-Stack Developer</span>
-                    <span class="job-company">| Credit Agricole CIB, Singapore</span>
+                    <span class="job-company">Credit Agricole CIB, Singapore</span>
                 </div>
                 <span class="job-date">Feb 2022 – Oct 2022</span>
             </div>
@@ -497,7 +503,7 @@
             <div class="job-header">
                 <div>
                     <span class="job-title">Software Developer</span>
-                    <span class="job-company">| Manulife (GrowthOps Asia), Kuala Lumpur, Malaysia</span>
+                    <span class="job-company">Manulife (GrowthOps Asia), Kuala Lumpur, Malaysia</span>
                 </div>
                 <span class="job-date">Apr 2020 – Feb 2022</span>
             </div>
@@ -512,7 +518,7 @@
             <div class="job-header">
                 <div>
                     <span class="job-title">Software Developer</span>
-                    <span class="job-company">| Nbytes Technologies, Mumbai, India</span>
+                    <span class="job-company">Nbytes Technologies, Mumbai, India</span>
                 </div>
                 <span class="job-date">Oct 2019 – Apr 2020</span>
             </div>
@@ -526,7 +532,7 @@
             <div class="job-header">
                 <div>
                     <span class="job-title">Software Developer</span>
-                    <span class="job-company">| SD Global Technologies, Kuala Lumpur, Malaysia</span>
+                    <span class="job-company">SD Global Technologies, Kuala Lumpur, Malaysia</span>
                 </div>
                 <span class="job-date">Apr 2017 – Oct 2019</span>
             </div>
@@ -540,7 +546,7 @@
             <div class="job-header">
                 <div>
                     <span class="job-title">Software Developer</span>
-                    <span class="job-company">| SOFOMO Embedded Solutions, Pune, India</span>
+                    <span class="job-company">SOFOMO Embedded Solutions, Pune, India</span>
                 </div>
                 <span class="job-date">Jun 2015 – Apr 2017</span>
             </div>
