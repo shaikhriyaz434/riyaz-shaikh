@@ -5,7 +5,7 @@ Singapore | +65 85874804 | [shaikhriyaz434@gmail.com](mailto:shaikhriyaz434@gmai
 ---
 
 ## PROFESSIONAL SUMMARY
-Dynamic Senior Software Engineer with **11 years of experience** specializing in API development, gateway migrations, and developer efficiency. Currently driving **Engineering Efficiency** by architecting **AI Agentic workflows** (LangGraph) and building ecosystem tools like an enterprise **plugin marketplace for coding agents** (Antigravity, Claude Code, Copilot). Extensive experience in cloud-native API management (Kong Gateway, Apigee, Mulesoft) and robust Infrastructure as Code (Terraform, AWS).
+Dynamic Senior Software Engineer with **11 years of experience** specializing in API development, gateway migrations, and developer efficiency. Currently driving **Engineering Efficiency** by architecting **AI Agentic workflows** (LangGraph), implementing **self-correcting Agentic RAG**, and building ecosystem tools like an enterprise **plugin marketplace for coding agents** (Antigravity, Claude Code, Copilot). Extensive experience in cloud-native API management (Kong Gateway, Apigee, Mulesoft) and robust Infrastructure as Code (Terraform, AWS).
 
 ---
 
