@@ -327,6 +327,8 @@
                 background-color: #fff;
                 padding: 0;
                 color: #000;
+                font-size: 13px;
+                line-height: 1.4;
             }
 
             .resume-container {
@@ -338,12 +340,46 @@
 
             @page {
                 size: A4;
-                margin: 15mm;
+                margin: 12mm;
             }
 
-            /* Prevent page breaks after headers */
+            section {
+                margin-bottom: 15px;
+            }
+
             h2 {
+                font-size: 15px;
+                margin-bottom: 8px;
+                padding-bottom: 2px;
                 page-break-after: avoid;
+            }
+
+            .divider {
+                margin: 10px 0;
+            }
+
+            .skills-table td {
+                padding: 5px 8px;
+                font-size: 12.5px;
+            }
+
+            .job {
+                margin-bottom: 12px;
+                page-break-inside: avoid;
+            }
+
+            .job-title {
+                font-size: 13.5px;
+            }
+
+            .job-bullets li {
+                font-size: 12.5px;
+                margin-bottom: 2px;
+            }
+
+            .edu-item {
+                font-size: 13px;
+                margin-bottom: 4px;
             }
         }
     </style>
@@ -457,7 +493,7 @@
             </ul>
         </div>
 
-        <div class="job" style="page-break-before: always;">
+        <div class="job">
             <div class="job-header">
                 <div>
                     <span class="job-title">Software Developer</span>
